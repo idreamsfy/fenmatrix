@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		<modelVersion>4.0.0</modelVersion>
+
+		<groupId>org.quant</groupId>
+		<artifactId>fenmatrix</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<packaging>jar</packaging>
+
+		<name>fenmatrix</name>
+		<url>http://maven.apache.org</url>
+
+		<properties>
+				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		</properties>
+
+		<dependencies>
+				<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+				<dependency>
+						<groupId>org.apache.commons</groupId>
+						<artifactId>commons-math3</artifactId>
+						<version>3.6.1</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/colt/colt -->
+				<dependency>
+						<groupId>colt</groupId>
+						<artifactId>colt</artifactId>
+						<version>1.2.0</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/org.jscience/jscience -->
+				<dependency>
+						<groupId>org.jscience</groupId>
+						<artifactId>jscience</artifactId>
+						<version>4.3.1</version>
+				</dependency>
+				<dependency>
+						<groupId>joda-time</groupId>
+						<artifactId>joda-time</artifactId>
+						<version>2.9.9</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/de.jollyday/jollyday -->
+				<dependency>
+						<groupId>de.jollyday</groupId>
+						<artifactId>jollyday</artifactId>
+						<version>0.5.3</version>
+				</dependency>
+				<dependency>
+						<groupId>junit</groupId>
+						<artifactId>junit</artifactId>
+						<version>4.12</version>
+						<scope>test</scope>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+				<dependency>
+						<groupId>log4j</groupId>
+						<artifactId>log4j</artifactId>
+						<version>1.2.17</version>
+				</dependency>
+				<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+				<dependency>
+						<groupId>com.google.guava</groupId>
+						<artifactId>guava</artifactId>
+						<version>23.6-jre</version>
+				</dependency>
+
+		</dependencies>
+</project>
