@@ -1,5 +1,6 @@
 package org.quant.fenmatrix.time;
 
+import org.joda.time.Days;
 import org.joda.time.Period;
 import org.quant.fenmatrix.asset.IntBasis;
 import org.quant.fenmatrix.tools.FM;
@@ -125,6 +126,18 @@ public class TimeUtil {
   public static Date addYear(Date d, int years) {
 
     return addYear(d, years, null, null);
+  }
+  
+  public static int DaysBetween(Date start,Date end) {
+	   //check if d1<d2
+	    int flag = 1;
+	    if (start.compareTo(end) > 0)
+	      flag = -1;
+
+	    Days days=Days.daysBetween(start.getDate(), end.getDate());
+	   // FM.debug(String.format("days count [%d]", days.getDays()));
+	    return flag*days.getDays();
+	  
   }
 
   public static void main(String[] agrs) {

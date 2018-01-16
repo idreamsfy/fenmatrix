@@ -6,7 +6,7 @@ import org.quant.fenmatrix.asset.Rate;
 
 import cern.colt.list.DoubleArrayList;
 
-public abstract class Interpolation {
+public abstract  class Interpolation {
 
   protected DoubleArrayList _x;
 
