@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.quant.fenmatrix.asset.Rate;
 import org.quant.fenmatrix.asset.Rate.QuoteType;
 import org.quant.fenmatrix.convention.Currency;
+import org.quant.fenmatrix.interpolation.LinearInterpolation;
 import org.quant.fenmatrix.time.Date;
 
 public class Curve {
@@ -101,7 +102,12 @@ public class Curve {
   public void GenerateCurve() {
     if (this.method == CurveMethod.Linear) {
       
+      LinearInterpolation linear=new LinearInterpolation();
+      linear.setCurve(this.mktcurve);
+      
     }
+    
+    
   }
 
   public ArrayList<Rate> getCurve() {
