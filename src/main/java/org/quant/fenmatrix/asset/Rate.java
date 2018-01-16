@@ -33,6 +33,12 @@ public class Rate {
     mid = .0;
   }
 
+  public Rate(Date date, double t, double b, double a, double m) {
+    this.date = TimeUtil.addDays(date, (int) t);
+    this.tenor = t;
+    this.mid = m;
+  }
+
   public Rate(Date date, String t, double b, double a, double m) {
 
     this.term = t;
@@ -68,7 +74,12 @@ public class Rate {
   }
 
   public static Rate valueOf(Date asofdate, String t, double m) {
-    Rate rate = new Rate(asofdate,t, 0.0, 0.0, m);
+    Rate rate = new Rate(asofdate, t, 0.0, 0.0, m);
+    return rate;
+  }
+
+  public static Rate valueOf(Date asofdate, double t, double m) {
+    Rate rate = new Rate(asofdate, t, 0.0, 0.0, m);
     return rate;
   }
 

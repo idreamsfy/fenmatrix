@@ -18,7 +18,7 @@ public class IntRate implements Cloneable {
   private Freq freq;
 
   private Calendar calendar = null;
-  
+
   private IntBasis Basis;
 
   private Index idx = null;
@@ -34,6 +34,19 @@ public class IntRate implements Cloneable {
   }
 
   private FixOrFloat IntType;
+
+  public enum DisType {
+
+    NO_DISCTYPE, /*  */
+    FIXED_DISC, /*  */
+    DUAL_DISC, /*  */
+    FORWARD_DISC, /*  */
+    STRIKE_DISC, /*  */
+    RATIO_DISC, /*  */
+    NO_DISC, /* Rate is already discount rate, no discount */
+    COLL_FRA_DISC /*  */
+
+  }
 
   private IntRate() {
 

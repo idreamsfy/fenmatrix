@@ -18,6 +18,8 @@ public abstract class Interpolation {
   }
 
   public void setCurve(ArrayList<Rate> curve) {
+    _x=new DoubleArrayList(curve.size());
+    _y=new DoubleArrayList(curve.size());
     for (Rate r : curve) {
 
       _x.add(r.tenor);
