@@ -5,7 +5,7 @@ import org.quant.fenmatrix.convention.Index;
 import org.quant.fenmatrix.time.Calendar;
 import org.quant.fenmatrix.time.Freq;
 
-public class IntRate implements Cloneable {
+public class InterestRate implements Cloneable {
 
   public Rate quotes;
 
@@ -48,18 +48,18 @@ public class IntRate implements Cloneable {
 
   }
 
-  private IntRate() {
+  private InterestRate() {
 
   }
 
-  public static IntRate valueOf(double rate,
+  public static InterestRate valueOf(double rate,
       FixOrFloat inttype,
       Compounding compound,
       Freq freq,
       Calendar c,
       Index idx) {
 
-    IntRate interest = new IntRate();
+    InterestRate interest = new InterestRate();
     interest.setAssettype(inttype).setCalender(c).setIdx(idx).setFreq(freq).setCompound(compound).setIntRate(rate);
     return interest;
 
@@ -69,7 +69,7 @@ public class IntRate implements Cloneable {
     return compound;
   }
 
-  public IntRate setCompound(Compounding compound) {
+  public InterestRate setCompound(Compounding compound) {
     this.compound = compound;
     return this;
   }
@@ -78,7 +78,7 @@ public class IntRate implements Cloneable {
     return freqMakesSense;
   }
 
-  public IntRate setFreqMakesSense(boolean freqMakesSense) {
+  public InterestRate setFreqMakesSense(boolean freqMakesSense) {
     this.freqMakesSense = freqMakesSense;
     return this;
   }
@@ -87,7 +87,7 @@ public class IntRate implements Cloneable {
     return freq;
   }
 
-  public IntRate setFreq(Freq freq) {
+  public InterestRate setFreq(Freq freq) {
     this.freq = freq;
     return this;
   }
@@ -96,7 +96,7 @@ public class IntRate implements Cloneable {
     return Rate;
   }
 
-  public IntRate setIntRate(double intRate) {
+  public InterestRate setIntRate(double intRate) {
     this.Rate = intRate;
     return this;
   }
@@ -105,7 +105,7 @@ public class IntRate implements Cloneable {
     return IntType;
   }
 
-  public IntRate setAssettype(FixOrFloat assettype) {
+  public InterestRate setAssettype(FixOrFloat assettype) {
     this.IntType = assettype;
     return this;
   }
@@ -114,7 +114,7 @@ public class IntRate implements Cloneable {
     return calendar;
   }
 
-  public IntRate setCalender(Calendar calender) {
+  public InterestRate setCalender(Calendar calender) {
     this.calendar = calender;
     return this;
   }
@@ -123,7 +123,7 @@ public class IntRate implements Cloneable {
     return idx;
   }
 
-  public IntRate setIdx(Index idx) {
+  public InterestRate setIdx(Index idx) {
     this.idx = idx;
     return this;
   }

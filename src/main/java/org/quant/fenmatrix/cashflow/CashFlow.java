@@ -27,11 +27,6 @@ public class CashFlow extends Event {
   @Override
   public String toString() {
 
-    /*
-    return "startdate[" + StartDate.toString() + "]enddate[" + EndDate.toString() + "]Amount[" + Double.toString(Amount) +
-        "]NPV[" + Double.toString(NPV) + "]";
-    */
-
     return String.format("startdate[%s]enddate[%s]Amount[%.4f]NPV[%.4f]", StartDate.toString(), EndDate.toString(),
         Amount, NPV);
 

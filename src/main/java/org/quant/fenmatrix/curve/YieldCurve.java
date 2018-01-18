@@ -1,7 +1,7 @@
 package org.quant.fenmatrix.curve;
 
 import java.util.ArrayList;
-import org.quant.fenmatrix.asset.IntRate;
+import org.quant.fenmatrix.asset.InterestRate;
 import org.quant.fenmatrix.asset.YieldRate;
 import org.quant.fenmatrix.time.Date;
 import org.quant.fenmatrix.time.Freq;
@@ -31,17 +31,17 @@ public class YieldCurve extends Curve {
 
   }
 
-  public IntRate spotRate() {
+  public InterestRate spotRate() {
 
-    IntRate intrate = null;
+    InterestRate intrate = null;
 
     return intrate;
 
   }
 
-  public IntRate discountFactor(Date maturity) {
+  public InterestRate discountFactor(Date maturity) {
 
-    IntRate intrate = IntRate.valueOf(0, null, null, freq, null, null);
+    InterestRate intrate = InterestRate.valueOf(0, null, null, freq, null, null);
 
     intrate.setFreq(this.freq);
 

@@ -32,7 +32,7 @@ public class Asset implements Cloneable {
 
   private ArrayList<Event> events;
 
-  private IntRate Int;
+  private InterestRate Int;
 
   private Curve mktCurve;
 
@@ -78,7 +78,7 @@ public class Asset implements Cloneable {
   private void CalcCashflow() throws FMException {
 
     //for fixed income asset based class
-    if (this.Int.getAssettype() == IntRate.FixOrFloat.Fixed) {
+    if (this.Int.getAssettype() == InterestRate.FixOrFloat.Fixed) {
 
       this.Int.getIntRate();
 
@@ -247,11 +247,11 @@ public class Asset implements Cloneable {
     return events;
   }
 
-  public IntRate getInt() {
+  public InterestRate getInt() {
     return Int;
   }
 
-  public Asset IntRate(IntRate i) {
+  public Asset IntRate(InterestRate i) {
     Int = i;
     return this;
   }
@@ -375,7 +375,7 @@ public class Asset implements Cloneable {
 
     Asset asset = Asset.valueOf("TEST");
 
-    IntRate interest = IntRate.valueOf(0.032800, IntRate.FixOrFloat.Fixed, Compounding.Simple, Freq.valueOf(4), null, null);
+    InterestRate interest = InterestRate.valueOf(0.032800, InterestRate.FixOrFloat.Fixed, Compounding.Simple, Freq.valueOf(4), null, null);
 
     asset.StartDate(Date.valueOf("20170905")).EndDate(Date.valueOf("20220905")).IntRate(interest).YTM(0.0328).Notional(100);
 

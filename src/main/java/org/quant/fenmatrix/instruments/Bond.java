@@ -4,7 +4,7 @@ package org.quant.fenmatrix.instruments;
 import java.util.ArrayList;
 
 import org.quant.fenmatrix.asset.Asset;
-import org.quant.fenmatrix.asset.IntRate;
+import org.quant.fenmatrix.asset.InterestRate;
 import org.quant.fenmatrix.cashflow.CashFlow;
 import org.quant.fenmatrix.convention.Compounding;
 import org.quant.fenmatrix.time.Calendar;
@@ -125,7 +125,7 @@ public class Bond implements Instrument {
   public static void main(String[] args) {
     Asset asset = Asset.valueOf("TEST");
 
-    IntRate interest = IntRate.valueOf(0.032800, IntRate.FixOrFloat.Fixed, Compounding.Simple, Freq.valueOf(4), null, null);
+    InterestRate interest = InterestRate.valueOf(0.032800, InterestRate.FixOrFloat.Fixed, Compounding.Simple, Freq.valueOf(4), null, null);
 
     asset.StartDate(Date.valueOf("20170905")).EndDate(Date.valueOf("20220905")).IntRate(interest).YTM(0.0328).Notional(100);
 
