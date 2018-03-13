@@ -1,8 +1,5 @@
 package org.quant.fenmatrix.curve;
 
-public class Bootstrap {
-	
-	
-	
+public class ZeroCurve extends Curve{
 
 }
