@@ -54,13 +54,11 @@ public class Bond implements Instrument {
     return this;
   }
 
-  @Override
   public double NPV() {
     // TODO Auto-generated method stub
     return 0;
   }
 
-  @Override
   public boolean isExpired() {
     // TODO Auto-generated method stub
     return false;
@@ -82,6 +80,7 @@ public class Bond implements Instrument {
         daycount.DaysBetween(preCoupDate, NextCoupDate);
 
     FM.require(this.Notional > 0, "Notional mush be set!");
+    FM.require(!this.isExpired(), "this bond is already maturied!");
 
     this.accrual = daycount.YearFactor(daycount.DaysBetween(preCoupDate, SettlementDate) * asset.getInt().getIntRate()) *
         this.Notional;
@@ -118,7 +117,6 @@ public class Bond implements Instrument {
     return this;
   }
 
-  @Override
   public void Valuation() {
   }
 

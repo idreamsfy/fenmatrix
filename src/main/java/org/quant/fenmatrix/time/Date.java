@@ -94,7 +94,6 @@ public class Date implements Comparable<Date>, Serializable, Cloneable {
     }
   }
 
-  @Override
   public int compareTo(Date d) {
     return this.date.compareTo(d.getDate());
   }

@@ -7,6 +7,14 @@ public class CumulativeNormalDistribution extends NormalDistribution {
 
   public double Calc(double z) {
 
-    return 0.0;
+    NormalDistribution standardNormal = new NormalDistribution();
+
+    return standardNormal.inverseCumulativeProbability(z);
+  }
+
+  public static void main(String[] agrs) {
+   // System.out.println(String.format("Distribution[%.6f]", CumulativeNormalDistribution.Calc(0.95)));
+   // System.out.println(String.format("Distribution[%.6f]", CumulativeNormalDistribution.Calc(0.95)));
+    
   }
 }
